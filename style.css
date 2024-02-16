@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&display=swap" rel="stylesheet');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+:root {
+    --font: 'Baloo Tamma 2'
+}
+
+body {
+    font-family: 'Baloo Tamma 2';
+    background: #2b2d42;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.title {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 3rem;
+    color: #379C84;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title p {
+    font-size: 1.2rem;
+    color: #379C84;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    background: #3AB795;
+    padding: 2rem;
+    border-radius: 1rem;
+    /* 10px = 1rem */
+    width: 400px;
+    overflow: hidden;
+    gap: 10px;
+    align-items: center;
+}
+
+.password-display {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.password-display input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: var(--font);
+    font-weight: 600;
+    background: #2b2d42;
+    color: #379c8598;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.password-display input:focus {
+    outline: none;
+}
+
+.password-display button {
+    width: 30px;
+    height: 30px;
+    background: #2b2d42;
+    color: #ceced2;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.password-display button:hover{
+    background: #379C84;
+    color: #2b2d42;
+}
+
+.password-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.option {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #2b2d42;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.option label {
+    font-size: 1.2rem;
+    color: #379C84;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    user-select: none;
+}
+
+.option input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #379C84;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.option input[type="checkbox"]:checked::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    margin: 20%;
+    background: #379C84;
+    transition: all .3s ease;
+}
+
+/* range */
+.option input[type="range"]{
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #379C84;
+    border-radius: 5px;
+    height: 5px;
+    transition: all .3s ease;
+}
+
+.option input[type="range"]::-webkit-slider-thumb,
+.option input[type="range"]::-moz-range-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #2b2d42;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #484a60;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* submit-btn */
+#submit-btn{
+    font-family: var(--font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background: #379C84;
+    color: #2b2d42;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#submit-btn:hover {
+    background: #2b2d42;
+    color: #379c84;
+}
